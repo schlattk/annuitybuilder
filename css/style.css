@@ -1,0 +1,816 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300);
+
+body{
+/* its always best to set up the fonts for the whole page first */
+
+
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;
+	line-height: 1.5;
+	color:#585858;
+	font-weight: 300; 
+
+/*
+ the shorthand for declaring font properties goes:
+font: weight size/line-height primary-font, fallback font
+*/
+	/*font: 300 16px/1.5 'Source Sans Pro', sans-serif;
+	color:#777777; */
+
+}
+/* 
+the expanded margin properties grouped below are the same as the shorthand version just below it
+div{
+
+margin-top: 40px;
+margin-right: 60px;
+margin-bottom: 20px
+margin-left:10px;
+	
+	margin: 40px 60px 20px 10px;
+}
+*/
+
+.container{
+
+	/*max-width:980px;*/
+	margin: 0 auto;
+}
+
+ header {
+
+ 	/* #fff is the same as #ffffff 
+ 	this only works when all the characters are the same */
+ 	background-color: #4D464F;
+ 	
+/* 
+we can apply shadows (or glows) onto the outside of elements
+the order of the properties is:
+
+box shadow: x-offset y-offset blur radius spread-radius color 
+default color is black
+*/
+
+ 	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+
+ 	/*
+ 	as well as declaring colors as hex values, we can also declare
+ 	them using rgb values (red, green and blue). these are numbers
+ 	that range from 0-255, and control the levels of the three colours
+
+    we can take this further by using the rgba property, which allows
+    us to also specify how opaque the colour should be (using a number between
+    0-1)
+
+    for example, rgba(0,255, 0, 0.5) would give us a 50% opaque green
+
+ 	*/
+ 	position: fixed;
+
+  /* here we give the header some precise positioning, ensuring it
+  stays at the top of the page*/
+
+ 	top: 0;
+
+/* when using fixed positioning, the element shrinks down so that
+its only as wide as its content, so we need to manually override this */
+
+ 	width: 100%;
+
+ 	z-index:10;
+/* when using fixed positioning, the element is taken outside of the normal flow
+of the page and onto its own layer, whcih also means these layers are stacked on
+top of each other
+
+by default, elements have a z-index of 1, so here we need to tell
+the header to force itself to the top layer to avoid anything else
+obstructing it from view */
+
+ }
+
+h1{
+	float: left;
+	padding: 20px 0;
+	font-size: 30px;
+	font-weight:500;
+	
+
+/*color: #69DE3E;}*/
+color:#FFF;}
+nav {
+	float:right;
+}
+
+nav a{
+	color:#FFF;
+	text-decoration: none;
+
+/* this padding is worked out by taking the overall height of the header (76px), and taking away the height
+ of the header (76px), and taking away the height of the link
+ itself (20px), which leaves us with 56px/2 */
+
+	padding: 28px 10px;
+
+	/* this gives you the best of both properties, by allowing you to stack elements
+	alongside each other, and have them also respect the padding that's added to them */
+	display: inline-block;
+
+	/* this will transition all the properties that change over the course
+	of 0.3s, giving a subtle animation/transition */
+
+	transition: all 0.3s;
+}
+
+
+
+/* this is the: hover pseudo state that is only activated when the element is
+hovered over */
+nav a:hover {
+	/*background-color: #000;*/
+	color: #1A8735;
+
+}
+
+/*#white {color:#FFF;*/
+/*text-decoration: none;}*/
+.beta{
+	position:absolute;
+	top:0px;
+	left:465px;
+}
+.beta h1{
+	color:#E80E44;
+	font-size: 20px;
+}
+
+.Intro{
+
+min-height:100vH;
+padding: 85px 0 140px 0px; /*makes space for the headline to appear*/
+
+	/*background-color: #0000;*/
+/*background-image: url(../images/reflectiondark.jpg);*/
+background-color:#92A8B0;
+background-position:center;
+background-size:cover;
+}
+
+.login{
+
+min-height:100vH;
+padding: 200px 0 0 0; /*makes space for the headline to appear*/
+
+	/*background-color: #0000;*/
+/*background-image: url(../images/reflectiondark.jpg);*/
+background-color:#92A8B0;
+background-position:center;
+background-size:cover;
+text-align: center;
+}
+.login h2{
+
+	font-size:20px;
+	text-align: center;
+}
+.login a {
+	color:#585858;
+	text-decoration: none;
+}
+.login a:hover{
+	color:#1A8735;
+}
+.login p{
+	padding: 50px 0 50px 0;
+}
+
+
+
+
+
+.Intro h2{color: #FFF;
+	font-size: 25px;
+text-align:center;
+padding:50px 0 100px 0px;
+
+
+}
+.Intro p {
+	color: #FFF;
+text-align: center;}
+
+.Intro img{width: 135px;
+height:135px;
+}
+
+.Intro svg {width: 135px;
+height: 135px;}
+
+.Intro a {
+	color:#FFF;
+	text-decoration: none;
+}
+
+.Intro a:hover{
+	color:#1A8735;
+}
+a:hover .hover{
+	fill: #1A8735;
+}
+
+
+.Fixed{
+min-height:100vH;
+  padding: 85px 0 140px 0px;
+background-color:#C8E0E8;
+/*background-image: url(../images/reflection.jpg);*/
+background-repeat:no-repeat;
+background-size:cover;
+}
+.Fixed h2{color:#1A8735;
+	font-size: 25px;
+text-align:center;
+padding:50px 0 100px 0px;
+}
+.Fixed p {
+	color:#1A8735;}
+
+.Fixed img{width: 135px;
+height:135px;
+}
+
+.Calc{
+min-height:100vH;
+  padding: 85px 0 140px 0px;
+background-color:#C8E0E8;
+/*background-image: url(../images/reflection.jpg);*/
+background-repeat:no-repeat;
+background-size:cover;
+}
+.Calc h2{color:#1A8735;
+	font-size: 25px;
+text-align:center;
+padding:50px 0 100px 0px;
+}
+.Calc p {
+	color:#1A8735;}
+
+.Calc img{width: 135px;
+height:135px;
+}
+
+.columns {
+	/* center all the text inside of our columns */
+	text-align:center;
+	
+	
+
+	/* create space around each column so they're not so bunched up*/
+	/*margin-top: 150px;
+	margin-bottom: 250px*/
+}
+
+h3{ display:inline;
+}
+	
+.higher{
+	/*margin-top: 125px;
+	margin-bottom: 125px;*/
+	padding: 200px 0 200px 0;
+	text-align:center;
+}
+.higher blockquote{
+	margin-top: 20px;
+
+}
+.higher img{
+	width:415px;
+	height:250px;
+}
+
+
+.safe{
+	/*margin-top: 125px;
+	margin-bottom: 125px;*/
+	padding: 200px 0 200px 0;
+	text-align:center;
+}
+.safe blockquote{
+	margin-top: 20px;
+
+}
+.safe img{
+	width:415px;
+	height:250px;
+}
+.value{
+	/*margin-top: 125px;
+	margin-bottom: 125px;*/
+	padding:200px 0 200px 0;
+	text-align:center;
+	background-color:#0000; 
+}
+.value blockquote{
+	margin-top: 20px;
+	text-align:left;
+}
+.value img{
+	width:415px;
+	height:250px;
+}
+.value h3{
+	margin-bottom:20px;
+}
+
+
+
+.when{
+	/*margin-top: 125px;
+	margin-bottom: 125px;*/
+	padding:200px 0 200px 0;
+	text-align:center;
+	background-color:#0000; 
+}
+.when blockquote{
+	margin-top: 20px;
+}
+.when img{
+	width:415px;
+	height:250px;
+}
+
+.how{
+	/*margin-top: 125px;
+	margin-bottom: 125px;*/
+	padding:125px 0 200px 0;
+	text-align:center;
+}
+
+.how blockquote{
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.how img{
+	width:415px;
+	height:450px;
+}
+.howtop {
+ margin-bottom:50px;
+}
+.howchart1{
+	float:left;
+	/*text-align:left;*/
+}
+
+.howchart2{
+	float:right;
+
+}
+
+
+
+.sellannuity{
+	height:100vh;
+	padding:200px 0 200px 0;
+	
+	/*background-color: #E5E3E8;*/
+	background-image: url(../images/reflection.jpg);
+	background-size: cover;
+	background-repeat: no repeat;
+    
+
+	}
+
+	.lovedones blockquote{
+	text-align:left;
+	padding:20px 0 20px 0;}
+
+.annuity{
+	/*margin-top: 125px;
+	margin-bottom: 125px;*/
+	text-align:center;
+	padding:35px 0 35px 0;
+
+}
+.calculator{
+	
+    text-align:center;
+    background-color:#C8E0E8;
+	/*color:#C8E0E8;*/
+
+}
+.input{
+	float:left;
+	width:45%;
+	text-align:center;
+
+}
+
+.income
+{
+    float:right;
+    width:55%;
+    text-align:center;
+    height:350px;
+    /*font-size: 20px;*/
+	/*color:#1A8735;*/
+	/*color:#C8E0E8;*/
+	/*font-weight:400;*/
+	padding:50px 25px 50px 25px;
+}
+
+#outputchart,
+#outputchart2{
+	max-width: 500px;
+	margin-top: 50px;
+}
+/*.hidden{
+	display:none;
+}*/
+
+
+.income img,
+.income2 img{
+	/*float:right;*/
+	position:absolute;
+	bottom:40px;
+	right:175px;
+	height:150px;
+	width:150px;
+}
+
+
+#bondtype {
+	border: none;
+}
+
+
+#bondlist, #bondlist2 {
+	min-height:100vH;
+	padding:125px 10% 125px 10%;
+	text-align: left;
+}
+#bondlist2 h2{
+	color:#1A8735;
+	padding:20px 0 20px 0;
+	font-weight:400;
+	
+}
+
+
+.bondoutput h2{
+	color:#1A8735;
+	padding:20px 0 20px 0;
+	font-weight:400;
+}
+
+
+
+.display img{
+	width:65px;
+	height:65px;
+}
+.display blockquote{
+	margin-top: 0px;
+}
+
+li{
+	padding:2px 2px 2px 2px;
+	cursor:pointer;
+	}
+
+.result{
+float:right;
+width:50%;
+height:350px;
+text-align:center;
+padding:100px 25px 100px 25px;
+color:#1A8735;
+font-weight:400;
+font-size: 20px;
+	
+	}
+.result img{
+	/*float:right;*/
+	position:absolute;
+	bottom:100px;
+	right:175px;
+	height:150px;
+	width:150px;
+
+}
+.disclaimer{
+	padding:45px 0 20px 0;
+}
+
+.disclaimer a{
+	color:#585858;
+	text-decoration: none;
+
+}
+
+.disclaimer a:hover{
+	color:transparent;
+}
+	
+
+.improved{
+	
+	size:35px;
+	padding:50px 0 ;
+}
+
+
+
+/*.annuity img{ max-height:400px;*/
+/*max-width: 800px;}*/
+.annuity blockquote{
+	margin-top: 15px;
+}
+
+.question{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question1{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question2{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question3{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question4{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question5{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question6{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question7{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question8{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question9{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question10{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+.question11{/*color:#69DE3E;*/color:#1A8735;cursor:pointer;}
+
+.hidden{display:none;}
+
+
+.faq {
+
+	min-height:100vh;
+	padding: 85px 0 140px 0px;
+	/*padding:2.5% 0 2.5% 0;*/
+	/*background-image: url(../images/reflection.jpg);*/
+	background-color:#C8E0E8;
+	/*background-size: cover;*/
+	/*background-repeat: no repeat;*/
+	clear:both;
+	}
+
+.faq blockquote{
+	
+	
+	margin-left:5%;
+	
+	margin-right:5%;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.answer {
+	overflow-y: hidden;
+	max-height: 400px; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: .55s;
+	transition-timing-function: cubic-bezier(0.42, 0, .58, 1);
+}
+
+.answer.hide {
+	max-height: 0;
+}
+.bond-list.hide {
+	max-height: 0;
+}
+
+
+ .contact {
+  clear: both;
+ }
+
+.contact {
+	/*
+    1.background image of map.jpg which needs to be centred and stretched
+    across
+	2. padding on top and bottom of 70px
+	3. align all text in the center
+	4.(you'll need to write a new selector
+	   for this), but you'll need to restyle
+	   the links
+
+	   a. colour of #444
+		b.remove the underline
+		c. border on the bottom of 2px #444
+
+
+	*/
+
+
+background-size: cover;
+
+padding-top: 70px;
+padding-bottom:70px;
+text-align:center;
+}
+
+.contact a{
+	color: #444;
+	text-decoration: none;
+	padding-bottom:1px;
+	border-bottom: 2px solid #444;
+}
+
+form {
+	max-width: 350px;
+	margin: 10px auto 0 auto;
+}
+
+
+/* unputs and textareas come with a lot of default styles
+that need to be overridden*/
+input,
+textarea {
+
+	/* over*/
+
+border:none;
+width: 100%;
+
+/* overrides the default padding of 10px */
+
+padding: 10px;
+margin: 10px 0;
+border-radius: 3px;
+
+}
+
+textarea { 
+	/* override the default (small) height */
+	height: 150px;
+
+	/* it's only going to allow us to resize the textarea along the vertical axis*/
+
+    resize: vertical;
+}
+
+select {
+
+	height: 45px;
+	width: 350px;
+	text-align: center;
+}
+
+
+
+/* this is an attribute selector, which allows us to select elements that match certain
+attributes*/
+
+input[type="button"] {
+
+	background-color:#4D464F;
+	color: #fff;
+
+
+/* this will tell the button to use the hand pointer cursor
+instead of the standard mouse (signals that it's somehting
+that needs to be clicked */
+
+	cursor: pointer;
+}
+input[type = "number"]{
+	color:#585858;
+}
+input[type = "text"]{
+	color:#585858;
+}
+
+
+input,
+select,
+option,
+textarea {
+	outline: none;
+	text-align: center;
+	/* this will allow us to have a nice transition of
+	the box shadow when the user clicks on the inputs */
+
+
+	box-shadow: 0 0 4px rgba(0,0,0,0);
+	transition: box shadow 0.3s;
+}
+
+/* this state is triggered when the cursor is currently
+active inside of the inputs/textareas */
+
+input:focus,
+select:focus,
+option:focus,
+textarea:focus{
+	box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+footer{
+	padding: 40px 0;
+	text-align: center;
+}
+	footer a{
+		margin:0 5px;
+		text-decoration: none;
+
+}
+small{ display: block;}
+
+.lightbox{
+	position:fixed;
+	top:25%;
+	left:25%;
+	width:40%;
+	height:50vH;
+	background-color:rgba(255,255,255,0.95);
+	z-index: 5;
+	display:none;
+
+}
+
+.lightbox ul{
+
+	position:absolute;
+	cursor:inherit;
+	color:#1A8735;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+}
+.lightbox p{
+
+	color:#4D464F;
+}
+.lightbox img{
+	position:absolute;
+	cursor:pointer;
+	top:5%;
+	right:5%;
+   width: 25px;
+   height: 25px;
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+body{
+	text-align:center;
+	min-width:500px;
+}
+	header{
+		position:static;
+		/* align everything in the middle */
+		
+
+	}
+
+	h1,
+	nav{ float:none;
+
+	}
+	h1{
+		padding-bottom: 0;
+	}
+
+	nav a{
+
+		padding: 20px;
+	}
+.intro {
+	margin-top:0;
+}
+.input{float:none;
+}
+.income{float:none;
+height:100vH;
+}
+
+.result{float:left;}
+.result img{display:none;}
+.value{padding:100px 25px 100px 25px;
+}
+.when{padding:100px 25px 100px 25px;}
+.how {padding:100px 25px 100px 25px;}
+.input{width:100%;}
+.income{width:100%;
+}
+
+#fixedtermcalc{padding:0 0 0 0;}
+#fixedtermcalc2{padding:0 0 0 0;}
+
+.disclaimer{padding: 0 0 0 0;}
+
+
+
+
+}
+
+
+
+
+
+

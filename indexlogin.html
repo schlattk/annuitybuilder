@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+
+	
+	<meta charset="utf-8">
+	<title>Your Annuity Benchmark</title>
+	<meta name="description" content="The better way of choosing your annuity">
+	<meta name="google-site-verification" content="r4ZfaqaG24SiXpGtS-TW4zk0blm3-_AzSXCg8lFszA4" />
+
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/lanes.css">   
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/style.css"> 
+
+</head>
+
+<body>
+
+
+
+	<header>
+		<div class="container group">
+	
+
+	<h1>Better - Your Annuity Benchmark</h1>
+	
+		<nav>
+		<a href="#Intro">Home</a>
+		<a href="#Fixed">Compare Prices</a>
+		<a href="#Calc">Calculators</a>
+		<a href="#faq">Questions</a>
+		<a href="mailto:info@chooseannuity.uk">Contact</a>
+		</nav>
+
+		</div>
+	</header>
+
+				
+	<div class ="login">
+		<h2> To get your password please write to <a href ="mailto:info@chooseannuity.uk">info@chooseannuity.uk</a></h2>
+		<p>Please enter your password here and press the button to enter the site</p>
+		<form name="myform" action ="" method ="get"> Password 
+			<input type="text"id = "login" value=""> <br> 
+     		<input type ="button" id = "loginButton" value="Press to access the site"><br>
+ 		</form>
+		
+		</div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script>
+
+var login = [];
+
+$.ajax({
+    url: "images/NewBook.xml",
+    dataType: "xml",
+    success: function (data) {
+        var xml_object,prices;
+        
+        xml_object = $(data);
+        
+
+        prices = xml_object.find("Cell");
+
+        prices.each(function () {
+            // Make JQ object from child node:
+            
+          current_node = $(this);
+            // Get one of it's attributes:
+           
+           
+        login.push(current_node.text());
+      
+      
+		});
+
+       }
+});
+
+var loginButton = document.getElementById("loginButton");
+
+loginButton.addEventListener("click", function(event){
+	var password = document.getElementById("login");
+if (password.value === login[0]) {window.open(login[1])}
+else {alert('please enter correct password')}
+});
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78855702-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
